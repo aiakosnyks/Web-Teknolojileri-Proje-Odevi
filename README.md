@@ -1,1 +1,1 @@
-# Web-Teknolojileri-Proje-devi
+Web Technologies Project ( Commits + Project)
