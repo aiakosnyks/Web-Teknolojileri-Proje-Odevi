@@ -7,6 +7,72 @@
           height: 100%;
         }
 
+
+     /*                   İletişim             */
+	 input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+	 
+	 
+	 
+	 
+	 
 <!----------ŞEHRİÖ--->
 
 .row > .column {
@@ -47,6 +113,8 @@
   padding: 0;
   width: 90%;
   max-width: 1200px;
+  
+  
 }
 
       /*    body    */
@@ -55,7 +123,64 @@
   background-image: url("https://thumbs.gfycat.com/UncommonHappyDorado-size_restricted.gif");
   background-size:initial ;
  }
+ 
+     /*      iletişim       */
+	 
+	 /*İletişim Sayfası*/
+#iletisim
+{
+    background: url("../images/11.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
 
+#iletisim td
+{
+  height:10px; 
+}
+#iletisim form
+{
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    width: 500px;
+    height: 650px;
+    margin: 50px auto;
+    padding: 50px 10px 30px 110px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#iletisim .overlay
+{
+    background-color: rgba(0,0,0,.3);
+}
+
+
+
+     /*      login         */
+	 
+	 .bg-login {
+	background-color: rgba(216, 89, 72, 0.5);
+
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    border: 10px #f1f1f1;
+    position: fixed;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    h1: background-color: black;
+    h1: font-size: 20px;
+    h1: color: darkred;
+    h1: font-family: arial;
+    
+  }
+	 
+	 
 #sehrim-giris{
 	background-color: rgba(216, 89, 72, 0.5);
 }
