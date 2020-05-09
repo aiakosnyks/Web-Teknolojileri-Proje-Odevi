@@ -67,13 +67,20 @@
   background-size:initial ;
  }
  
+ /*            CV            */ 
  
+ #cv {
+	 background-color: rgba(216, 89, 72, 0.7);
+	 color: white;
+	 font-size:24 px;
+	 width: 1400px;
+	 height: 400px;
+ }
+
  
  /*       İLETİŞİM    */
  
- 
- .error {color: #darkred;}
- 
+  
   #iletisim td
 {
   height:10px; 
