@@ -70,13 +70,18 @@
  
  
  /*       İLETİŞİM    */
+ 
+ 
+ .error {color: #darkred;}
+ 
   #iletisim td
 {
   height:10px; 
 }
 #iletisim form
 {
-    background: rgba(216, 89, 72, 0.5);;
+	align: center;
+    background: rgba(216, 89, 72, 0.5);
     color: #fff;
     width: 500px;
     height: 650px;
@@ -110,7 +115,7 @@
 #iletisim select 
 {
     border: none;
-    background-color: rgba(216, 89, 72, 0.6);;
+    background-color: rgba(216, 89, 72, 0.6);
   }
   
   
