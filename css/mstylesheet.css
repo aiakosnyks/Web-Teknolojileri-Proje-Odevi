@@ -76,6 +76,14 @@
 	 width: 1400px;
 	 height: 400px;
  }
+ 
+ /*       İndex     */
+ 
+   .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  
 
  
  /*       İLETİŞİM    */
