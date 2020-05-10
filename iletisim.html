@@ -9,6 +9,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/mstylesheet.css">
+
+    <script>
+      function kontrol() {
+        document.getElementById("name-span").innerHTML = "" ;
+        document.getElementById("lastname-span").innerHTML = "" ;
+        document.getElementById("email-span").innerHTML = "" ;
+
+        var name = document.forms["iletisim-form"]["name"].value;
+        if (name == "") {
+          document.getElementById("name-span").innerHTML = "Name must be filled out!" ;
+          return false;
+        }
+
+        var lastname = document.forms["iletisim-form"]["lastname"].value;
+        if (lastname == "") {
+          document.getElementById("lastname-span").innerHTML = "Lastname must be filled out!" ;
+          return false;
+        }  
+
+        var email = document.forms["iletisim-form"]["email"].value;
+        if (email == "") {
+          document.getElementById("email-span").innerHTML = "E-Mail must be filled out!" ;
+          return false;
+        }  
+        var mySelect = document.getElementById("city");
+        if(mySelect.value == "") {
+          document.getElementById("city-span").innerHTML = "City must be selected!" ;
+          return false;
+        }
+        if (document.forms["iletisim-form"]["gender"][0].checked == false &&
+         (document.forms["iletisim-form"]["gender"][1].checked == false ) ){ 
+          document.getElementById("gender-span").innerHTML = "Gender must be selected!" ;
+        return false;
+    }
+       }
+    </script>
 </head>
 
 <body>
@@ -24,7 +60,7 @@
           <a class="nav-link" href="sehrim.html"> ŞEHRİM </a>
       </li>
         <li class="nav-item">
-          <a class="nav-link "href="mirasımız.html"> MİRASIMIZ </a>
+          <a class="nav-link "href="mirasimiz.html"> MİRASIMIZ </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="iletisim.html" > İLETİŞİM </a>
@@ -35,7 +71,7 @@
     </ul>
 </nav>
 <div class="col-sm-6">
-  <img src="images/yuuta.gif.gif" style="margin-top: 20px"; width="1085px" >
+  <img src="images/yuuta.gif.gif" style="margin-top: 20px"; width="1050px" >
 </div>
 
 
@@ -54,7 +90,7 @@
               </tr>
               <tr>
                 <td>
-                  <input type="isim" id="name" placeholder="İsim" type="text">
+                  <input id="name" placeholder="İsim" name="name" type="text">
                 </td>
               </tr>
               <tr>
@@ -69,7 +105,7 @@
               </tr>
               <tr>
                 <td>
-                  <input type="soyisim" id="lastname" placeholder="Soyisim" type="text">
+                  <input id="lastname" name="lastname" placeholder="Soyisim" type="text">
                 </td>
               </tr>
               <tr>
@@ -84,7 +120,7 @@
               </tr>
               <tr>
                 <td>
-                  <input type="email" id="email" placeholder="E-Mail" type="text">
+                  <input type="email" name="email" id="email" placeholder="E-Mail">
                 </td>
               </tr>
               <tr>
@@ -100,7 +136,7 @@
               <tr>
                 <td>
                   <select name="sehir" id="city">
-                          <option value="Seçiniz..."></option>
+                          <option value="" disabled selected>Select City</option>
                           <option value="Adana">Adana</option>
                           <option value="Amasya">Amasya</option>
                           <option value="Adıyaman">Adıyaman</option>
@@ -198,8 +234,8 @@
               </tr>
               <tr>
                 <td>
-                  <input type="checkbox" name="gender" type="radio" value="Erkek">Kadın
-                  <input type="checkbox" name="gender" type="radio" value="Kadın">Erkek
+                  <input name="gender" type="radio" value="Erkek">Kadın
+                  <input name="gender" type="radio" value="Kadın">Erkek
                 </td>
               </tr>
               <tr>
